@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody AI Widget</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        iframe {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://widget.getcody.ai/9a5a1dcb-0149-42e0-a4f9-4e8d1e06f2ef" style="border:0px;" name="codyai" scrolling="no" frameborder="1" marginheight="0" marginwidth="0" height="800px" width="100%" allowfullscreen></iframe>
+    <script>
+        // Define una función para recibir mensajes del bot
+        function receiveMessageFromBot(message) {
+            // Puedes hacer algo con el mensaje, por ejemplo, mostrarlo en el iframe
+            var iframe = document.querySelector('iframe');
+            iframe.contentWindow.postMessage(message, '*');
+        }
+    </script>
+</body>
+</html>
